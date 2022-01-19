@@ -1,2 +1,2 @@
 # Coffee Shop Website
- Coffe shop website using React and Firebase
+ Coffee shop website using React and Firebase
