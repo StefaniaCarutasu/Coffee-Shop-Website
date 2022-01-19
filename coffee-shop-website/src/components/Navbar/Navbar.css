@@ -1,0 +1,29 @@
+.navbar {
+    background: brown;
+    padding: 2vh;
+    color: #fff;
+  }
+  .navbar nav {
+    display: flex;
+    align-items: top;
+    max-width: 500vw;
+    margin: 0 auto;
+    margin-left: 1vw;
+  }
+  .navbar a.brand {
+    margin-right: 1vw;
+    color: #fff;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    color:black;
+  }
+
+  .navbar a.activeLink  {
+    color: black;
+  }
+
+.searchbar {
+      display: inline-flex;
+      align-items: right;
+}
