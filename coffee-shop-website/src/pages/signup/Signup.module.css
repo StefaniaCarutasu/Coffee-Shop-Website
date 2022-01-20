@@ -1,0 +1,56 @@
+.signup-form {
+    max-width: 15vw;
+    margin: 1vw auto;
+    padding: 0.5vw;
+}
+
+.signup-form h1 {
+    color: blanchedalmond;
+}
+
+.signup-form button h3 {
+    color: blanchedalmond;
+}
+
+.signup-form label {
+    display: block;
+    margin: 30px auto;
+    color: blanchedalmond;
+}
+
+.signup-form span {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.signup-form input {
+    padding: 8px 6px;
+    font-size: 1em;
+    color: #777;
+    width: 100%;
+}
+
+.star-label {
+    display: inline-flex;
+}
+
+.star-label p {
+    color: red;
+    padding-right: 0.3vw;
+}
+
+.signup-form button {
+    display: inline-flex;
+    align-items: center;
+    background-color: brown;
+}
+
+.signup-form button h3:hover{
+    background-color: brown;
+    color: black !important;
+}
+
+.signup-form button:hover{
+    background-color: brown;
+}
+

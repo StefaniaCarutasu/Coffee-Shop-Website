@@ -27,3 +27,8 @@
       display: inline-flex;
       align-items: right;
 }
+
+.login-signup {
+  display: inline-flex;
+  margin-left: 65vw;
+}

@@ -1,0 +1,52 @@
+.login-form {
+    max-width: 15vw;
+    margin: 1vw auto;
+    padding: 0.5vw;
+}
+
+.login-form h1 {
+    color: blanchedalmond;
+}
+
+.login-form button h3 {
+    color: blanchedalmond;
+}
+
+.login-form label {
+    display: block;
+    margin: 30px auto;
+    color: blanchedalmond;
+}
+
+.login-form span {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.login-form input {
+    padding: 8px 6px;
+    font-size: 1em;
+    color: #777;
+    width: 100%;
+}
+
+.login-form button {
+    display: inline-flex;
+    align-items: center;
+    background-color: brown;
+    
+}
+
+.login-form button h3:hover{
+    background-color: brown;
+    color: black !important;
+}
+
+.login-form button:hover{
+    background-color: brown;
+}
+
+
+.login-form button img {
+    padding-right: 0.3vw;
+}

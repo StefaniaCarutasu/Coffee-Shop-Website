@@ -7,10 +7,10 @@ import { Nav } from 'react-bootstrap'
 import './Navbar.css'
 import Searchbar from '../Searchbar/Searchbar'
 
-export default function Navbar({home, gallery, products, contact, login, signup}) {
+export default function Navbar({home, gallery, contact, login, signup}) {
 
   return (
-    <div>
+    <>
         <div className="navbar" >
             <Nav>
                 <NavLink exact to={home} className="brand" activeClassName="activeLink">
@@ -19,18 +19,18 @@ export default function Navbar({home, gallery, products, contact, login, signup}
                 <NavLink to={gallery} className="brand" activeClassName="activeLink">
                   <h3>Gallery</h3>
                 </NavLink>
-                <NavLink to={products} className="brand" activeClassName="activeLink">
-                  <h3>Products</h3>
-                </NavLink>
                 <NavLink to={contact} className="brand" activeClassName="activeLink">
                   <h3>Contact us!</h3>
                 </NavLink>
-                <NavLink to={login} className="brand" activeClassName="activeLink">
-                  <h3>Login</h3>
-                </NavLink>
-                <NavLink to={signup} className="brand" activeClassName="activeLink">
-                  <h3>Sign up</h3>
-                </NavLink>
+                <div className='login-signup'>
+                  <NavLink to={login} className="brand" activeClassName="activeLink">
+                    <h3>Login</h3>
+                  </NavLink>
+                  <NavLink to={signup} className="brand" activeClassName="activeLink">
+                    <h3>Sign up</h3>
+                  </NavLink>
+                </div>
+                
                 {/*<div className='searchbar'>
                     <Searchbar />
                     <Link to="/create">Create Recipe</Link>
@@ -38,7 +38,7 @@ export default function Navbar({home, gallery, products, contact, login, signup}
             </Nav>
         </div>
         <Logo />
-    </div>
+    </>
     
   )
 }
