@@ -13,7 +13,7 @@ export default function Gallery () {
   useEffect(() => {
     setIsPending(true);
 
-    const unsub =projectFirestore.collection('products').onSnapshot((snapshot) => {
+    const unsub = projectFirestore.collection('products').onSnapshot((snapshot) => {
       if (snapshot.empty) {
         setError("No products to load")
         setIsPending(false)
@@ -23,6 +23,18 @@ export default function Gallery () {
         snapshot.docs.forEach(doc => {
           results.push({id: doc.id, ...doc.data()})
         })
+
+        function compare( a, b ) {
+          if ( a.priority < b.priority ){
+            return -1;
+          }
+          if ( a.priority > b.priority ){
+            return 1;
+          }
+          return 0;
+        }
+        
+        results.sort( compare );
 
         setData(results)
         setIsPending(false)
