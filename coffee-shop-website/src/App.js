@@ -55,10 +55,6 @@ function App() {
           <Route path={gallery}>
             <Gallery />
           </Route>
-
-          <Route path={profile}>
-            <Profile />
-          </Route>
         </Switch>
 
       </BrowserRouter>
