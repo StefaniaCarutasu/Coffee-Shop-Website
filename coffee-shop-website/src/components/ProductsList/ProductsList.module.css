@@ -13,7 +13,7 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     position: relative;
-    max-width: 100vw;
+    max-width: 100%;
   }
   .products-list .card:hover {
     transform: rotate(3deg);
