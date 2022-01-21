@@ -1,11 +1,10 @@
 .navbar {
     background: brown;
-    padding: 2vh;
-    color: #fff;
+    padding: 1vh;
   }
   .navbar nav {
-    display: flex;
-    align-items: top;
+    display: inline-flex;
+    align-items: center;
     max-width: 500vw;
     margin: 0 auto;
     margin-left: 1vw;
@@ -15,7 +14,18 @@
     color: blanchedalmond;
     text-decoration: none;
   }
+
   .navbar a:hover {
+    color:black;
+  }
+
+  .nav li.brand {
+    margin-right: 1vw;
+    color: blanchedalmond;
+    text-decoration: none;
+  }
+
+  .nav li:hover {
     color:black;
   }
 
@@ -28,7 +38,8 @@
       align-items: right;
 }
 
-.login-signup {
+.auth {
   display: inline-flex;
-  margin-left: 65vw;
+  align-items: right;
+  margin-left: 60vw;
 }
