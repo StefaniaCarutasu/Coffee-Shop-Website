@@ -3,14 +3,16 @@ import { NavLink, Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
 import { Nav } from 'react-bootstrap'
 import { useLogout } from '../../hooks/useLogout'
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 // styles
 import './Navbar.css'
 import Searchbar from '../Searchbar/Searchbar'
 
-export default function Navbar({home, gallery, contact, login, signup}) {
+export default function Navbar({home, gallery, contact, login, signup, profile}) {
 
   const { logout } = useLogout()
+  const { user } = useAuthContext()
 
   return (
     <>
@@ -25,15 +27,30 @@ export default function Navbar({home, gallery, contact, login, signup}) {
                 <NavLink to={contact} className="brand" activeClassName="activeLink">
                   <h4>Contact us!</h4>
                 </NavLink>
-                <NavLink to={login} className="brand" activeClassName="activeLink">
-                    <h4>Login</h4>
-                </NavLink>
-                <NavLink to={signup} className="brand" activeClassName="activeLink">
-                  <h4>Sign up</h4>
-                </NavLink>
-                <li className='brand' activeClassName="activeLink" onClick={logout}>
-                  <h4>Logout</h4>
-                </li>
+                { !user && (
+                  <>
+                    <NavLink to={login} className="brand" activeClassName="activeLink">
+                        <h4>Login</h4>
+                    </NavLink>
+                    <NavLink to={signup} className="brand" activeClassName="activeLink">
+                      <h4>Sign up</h4>
+                    </NavLink>
+                  </>
+                )}
+
+                { user && (
+                  <div className='right-nav'>
+                    <li className='name'><h4>Hello, {user.displayName} </h4></li>
+                    <NavLink to={login} className="brand" activeClassName="activeLink">
+                        <h4>Profile</h4>
+                    </NavLink>
+                    <li className='brand' activeClassName="activeLink" onClick={logout}>
+                      <h4>Logout</h4>
+                    </li>
+                  </div>
+                )}
+                
+               
 
                   {/* <div className='auth'>
                   <NavLink to={login} className="brand" activeClassName="activeLink">

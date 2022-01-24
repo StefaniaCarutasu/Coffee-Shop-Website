@@ -19,7 +19,18 @@
     color:black;
   }
 
+  .navbar .right-nav {
+    display: inline-flex;
+    margin-left: 50vw;
+  }
+
   .nav li.brand {
+    margin-right: 1vw;
+    color: blanchedalmond;
+    text-decoration: none;
+  }
+
+  .nav li.name {
     margin-right: 1vw;
     color: blanchedalmond;
     text-decoration: none;
