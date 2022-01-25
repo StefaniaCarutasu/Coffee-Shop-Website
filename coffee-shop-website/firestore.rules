@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /applications/{document=**} {
+      allow create: if request.auth != null;
+    }
+     match /offers/{document=**} {
+      allow read;
+     }
+
+     match /products/{document=**} {
+      allow read;
+     }
+  }
+}
