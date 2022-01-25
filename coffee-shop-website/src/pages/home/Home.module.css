@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.grid h3 {
+    padding-left: 5%;
+    padding-right: 5%;
+    color: blanchedalmond;
+}
+
+.grid .right {
+    align-items: center;
+    padding-left: 40%;
+    color: blanchedalmond;
+}
+

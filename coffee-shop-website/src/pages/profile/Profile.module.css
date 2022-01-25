@@ -1,0 +1,17 @@
+.gallery {
+    max-width: 85%;
+    margin: 60px auto;
+  }
+
+.loading {
+    color: blanchedalmond;
+}
+
+.username {
+  color: brown;
+}
+
+.profile_picture {
+  width: 200px;
+  height: auto;
+}

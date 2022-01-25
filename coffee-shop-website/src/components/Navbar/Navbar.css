@@ -36,7 +36,7 @@
     text-decoration: none;
   }
 
-  .nav li:hover {
+  .nav li.brand:hover {
     color:black;
   }
 

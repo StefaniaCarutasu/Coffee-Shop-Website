@@ -1,29 +1,29 @@
-.signup-form {
-    max-width: 25vw;
+.join_form {
+    max-width: 20vw;
     margin: 1vw auto;
     padding: 0.5vw;
 }
 
-.signup-form h1 {
+.join_form h1 {
     color: blanchedalmond;
 }
 
-.signup-form button h3 {
+.join_form button h3 {
     color: blanchedalmond;
 }
 
-.signup-form label {
+.join_form label {
     display: block;
     margin: 30px auto;
     color: blanchedalmond;
 }
 
-.signup-form span {
+.join_form span {
     display: block;
     margin-bottom: 6px;
 }
 
-.signup-form input {
+.join_form input {
     padding: 8px 6px;
     font-size: 1em;
     color: #777;
@@ -39,18 +39,18 @@
     padding-right: 0.3vw;
 }
 
-.signup-form button {
+.join_form button {
     display: inline-flex;
     align-items: center;
     background-color: brown;
 }
 
-.signup-form button h3:hover{
+.join_form button h3:hover{
     background-color: brown;
     color: black !important;
 }
 
-.signup-form button:hover{
+.join_form button:hover{
     background-color: brown;
 }
 
@@ -64,3 +64,6 @@
     border-color: red;
 }
 
+.intro_text {
+    color: blanchedalmond;
+}

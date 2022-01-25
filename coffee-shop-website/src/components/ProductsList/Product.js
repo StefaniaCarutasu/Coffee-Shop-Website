@@ -2,8 +2,7 @@ import styles from './Product.module.css'
 
 export default function Product({ product }) {
     const getPicturePath = (picture_name) => {
-        let path = "../../images/products/" + picture_name + ".jpg"
-        let picture_path = "./products/" + picture_name + ".jpg"
+        let picture_path = "./images/products/" + picture_name + ".jpg"
         return picture_path 
     }
   return (

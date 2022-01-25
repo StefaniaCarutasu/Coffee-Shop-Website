@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-import {useState} from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-// import Logo from './components/Logo';
 import './App.css';
+import * as Icon from 'react-bootstrap-icons';
 
 
 // page components
@@ -16,6 +16,7 @@ import Profile from './pages/profile/Profile'
 import Navbar from './components/Navbar/Navbar';
 import './components/Navbar/Navbar.css';
 import { useAuthContext } from './hooks/useAuthContext';
+import ContactButtons from './components/ContactButtons/ContactButtons';
 
 
 function App() {
@@ -27,51 +28,52 @@ function App() {
   const gallery = '/gallery';
   const login = '/login';
   const signup = '/signup';
-  const contact = '/contact';
+  const join = '/join';
   const profile = '/profile';
 
   return (
     <div className="App">
 
-      { authIsReady && (
-      <BrowserRouter>
-      
-      <div >
-          <Navbar home = {home} gallery = {gallery} contact = {contact} login = {login} signup = {signup} profile={profile} />
-      </div>
-      
-      
-        <Switch>
-          <Route exact path={home}>
-            { !user && <Redirect to = {login} />}
-            { user && <Home /> }
-          </Route>
+      {authIsReady && (
+        <BrowserRouter>
 
-          <Route path={contact}>
-            <Contact />
-          </Route>
+          <div >
+            <Navbar home={home} gallery={gallery} join={join} login={login} signup={signup} profile={profile} />
+          </div>
 
-          <Route path={login}>
-            { user && <Redirect to = {home} />}
-            { !user && <Login /> }
-          </Route>
+          <Switch>
+            <Route exact path={home}>
+              <Home />
+            </Route>
 
-          <Route path={signup}>
-            { user && <Redirect to = {home} />}
-            { !user && <SignUp /> }
-          </Route>
+            <Route path={join}>
+              {!user && <Redirect to={login} />}
+              {user && <Contact />}
+            </Route>
 
-          <Route path={gallery}>
-            <Gallery />
-          </Route>
+            <Route path={login}>
+              {user && <Redirect to={home} />}
+              {!user && <Login />}
+            </Route>
 
-          <Route path={profile}>
-            <Profile />
-          </Route>
-        </Switch>
+            <Route path={signup}>
+              {user && <Redirect to={home} />}
+              {!user && <SignUp />}
+            </Route>
 
-      </BrowserRouter>
+            <Route path={gallery}>
+              <Gallery />
+            </Route>
+
+            <Route path={profile}>
+              <Profile />
+            </Route>
+          </Switch>
+
+        </BrowserRouter>
       )}
+
+      <ContactButtons />
 
     </div>
   );
