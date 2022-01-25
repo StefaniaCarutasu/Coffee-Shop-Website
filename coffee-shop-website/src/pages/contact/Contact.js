@@ -10,6 +10,7 @@ import { useAuthContext } from '../../hooks/useAuthContext'
 export default function Contact() {
   const [fullName, setFullName] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
+  const [email, setEmail] = useState('')
 
   const [resume, setResume] = useState(null)
   const [resumeError, setResumeError] = useState(null)
@@ -23,7 +24,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    addDocument({ fullName, phoneNumber, uid: user.uid }, resume)
+    addDocument({ fullName, phoneNumber, email, uid: user.uid }, resume)
     history.push('/');
   }
 
@@ -82,6 +83,18 @@ export default function Contact() {
             type="text"
             onChange={(e) => setPhoneNumber(e.target.value)}
             value={phoneNumber}
+          />
+        </label>
+        <label>
+          <div className={styles['star-label']}>
+            <p>*</p>
+            <span>Email</span>
+          </div>
+          <input
+            required
+            type="text"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </label>
         <label>
