@@ -6,15 +6,15 @@ export default function Home() {
     <div className={styles["grid"]}>
       <section className={styles["left"]}>
         <h3><strong>Cosy atmosphere and good coffee. What more could you ask for?</strong></h3>
-        <div><p id="aparitieTreptata"></p></div>
+        <br />
+        <p>Coffee++ is a start up Bucharest, Romania based coffee roaster that has developed a line of premium coffees and espressos.
+          Coffee++ is known for the cosy atmosphere, delicious food and fine coffee selection.
+          The friendly staff makes your vizit better every single time!</p>
       </section>
       <Mosaic />
       <div className={styles["right"]}>
-          <table>
-            <tr><th>Oferta zilei</th></tr>
-            <tr><td>IA CAFEA</td></tr>
-            <tr><td>SURPRAIS</td></tr>
-          </table>
+        <h1>Special offer!</h1>
+        <p>Only during winter months, we offer you a cup of tea on any order greater than 30RON</p>
       </div>
     </div>
   );

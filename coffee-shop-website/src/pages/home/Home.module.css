@@ -3,15 +3,23 @@
     grid-template-columns: 30% 40% 30%;
 }
 
-.grid h3 {
+.grid .left {
     padding-left: 5%;
     padding-right: 5%;
+    text-align: justify;
+    align-items: left;
     color: blanchedalmond;
 }
 
+.grid .left h3 {
+    text-align: center;
+}
+
 .grid .right {
+    padding-left: 5%;
+    padding-right: 5%;
     align-items: center;
-    padding-left: 40%;
     color: blanchedalmond;
 }
+
 
